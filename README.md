@@ -6,4 +6,4 @@
 
 # Introduction
 
-RL4QuantumCircuits seeks to build on current efforts in algorithm improvement and development using a reinforcement learning approach. The algorithms we are working with are Matrix Multiplication, Fast Fourier Transform, Quantum Fourier Transform, and the Classical Simulation of Quantum Circuits. The Reinforcement learning models will look for ways to reduce the amount of operations that are needed to perform these algorithms on different sizes and dimensions.
+RLForQuantumCircuits seeks to build on current efforts in algorithm improvement and development using a reinforcement learning approach. The algorithms we are working with are Matrix Multiplication, Fast Fourier Transform, Quantum Fourier Transform, and the Classical Simulation of Quantum Circuits. The Reinforcement learning models will look for ways to reduce the amount of operations that are needed to perform these algorithms on different sizes and dimensions.
