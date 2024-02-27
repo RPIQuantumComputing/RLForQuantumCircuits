@@ -1,0 +1,3 @@
+<h1>FFT Tensor Decomposition</h1>
+
+In order to efficiently search for ways to minimize the operations performed by the FFT, we will use tensors of rank 3 containing 1 x N input vectors.
