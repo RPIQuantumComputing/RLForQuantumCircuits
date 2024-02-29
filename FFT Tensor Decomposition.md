@@ -8,9 +8,9 @@ The input to the Fast Fourier Transform (FFT) algorithm is often a $1 * N$ dimen
 We will represent the FFT as a tensor of $Rank = 3$ containing $1 x N$ input vectors in order for the RL agent to look for shortcuts in the tensor, thereby reducing memory consumption and runtime. 
 
 **How can reinforcement learning be used to optimize the FFT Algorithm?**
-Reinforcement learning are able to take a heuristic approach to problem solving, similar to humans. The main difference is that computers can process many times more data and operations than the human brain can. This allows the model to try many different methods for solving a problem and with each mistake or success, it adapts and follows the path that will maximize the amount of reward it will gain.
+Reinforcement learning models can take a heuristic approach to problem-solving, similar to humans. The main difference is that computers can process many times more data and operations than the human brain can. This allows the model to try many different methods for solving a problem and with each mistake or success, it adapts and follows the path that will maximize the amount of reward it will gain.
 >Note: The reward is determined by a function that calculates how favorable a state or decision is. The sum of these rewards over a set of actions is the return.
 
-Our RL algorithm will search through the tensor and try different approaches of performing the FFT while comparing the results to the actual output. Given the right environment and learning functions the algorithm can arrive at new and interesting results.
+Our RL algorithm will search through the tensor and try different approaches to performing the FFT while comparing the results to the actual output. Given the right environment and learning functions the algorithm can arrive at new and interesting results.
 
 Sources: Steven L. Brunton; Professor,  [University of Washington](https://scholar.google.com/citations?view_op=view_org&hl=en&org=5340226318625937772)
