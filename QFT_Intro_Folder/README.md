@@ -7,7 +7,7 @@ The Quantum Fourier Transform (QFT) is an operation ran on a multip-qubit system
 ### CPSR Gates
 The CSPR gate utilizes a control qubit and a target qubit, shifting the target qubit's phase relative to the distance between the control and target qubit. This operation results in the entangling of the two qubits involved in the gate.
 
-Below is the matrix representation of the CPSR gate in a hypothetical three qubit system: <br>
+Below is the matrix representation of the CPSR gate in a hypothetical three-qubit system: <br>
 <div align="center">
 
 ![CPSR GATE](https://github.com/RPIQuantumComputing/RLForQuantumCircuits/blob/QFT_Intro_branch/QFT_Intro_Folder/Screenshot%202024-03-01%20145625.png?raw=true)
@@ -17,7 +17,7 @@ Below is the matrix representation of the CPSR gate in a hypothetical three qubi
 The identity matrix for qubits one and three is present to ensure only the second qubit is affected by the CPSR gate. This highlights that the control qubit in this gate remains unchanged. 
 
 ### Hadamard Gate
-The Hadamard gate is used to alter the state vector of a qubit so that it represents an equal super position of states 0 and 1. 
+The Hadamard gate is used to alter the state vector of a qubit so that it represents an equal superposition of states 0 and 1. 
 
 Below is the matrix representation of a Hademard gate on the first qubit in a hypothetical three-qubit system:<br>
 <div align="center">
@@ -34,7 +34,7 @@ In this three-qubit circuit, the "H" gates represent Hademard gates, and the "Z"
 
 ## Section Two: Representing the QFT as a Tensor Network. 
 
-The classical simulation of the QFT can be represented as a tensor network which contracts towards $N$ state vectors, where $N$ is the number of qubits in the QFT circuit. 
+The classical simulation of the QFT can be represented as a tensor network that contracts towards $N$ state vectors, where $N$ is the number of qubits in the QFT circuit. 
 
 The image below represents the tensor network visualization of a classically simulated QFT circuit:
 
@@ -46,7 +46,7 @@ Alternatively, the QFT tensor network can be represented linearly to emphasize t
 
 ![LINEAR QFT NETWORK](https://github.com/RPIQuantumComputing/RLForQuantumCircuits/blob/QFT_Intro_branch/QFT_Intro_Folder/QFT%20TENSOR%20NETWORK%20TWO.jpg?raw=true)
 
-This visualization follows a left-to-right flow of contraction, and does a better job at representing entanglement. 
+This visualization follows a left-to-right flow of contraction and does a better job at representing entanglement. 
 
 ## Section Three: Reinforcement Learning (RL) Applications
 Representing the classical simulation of the QFT circuit as a tensor network makes it easier for RL algorithms to optimize the simulation of QFT; tensor networks allow the RL algorithm to approach the optimization task as a tensor network contraction order (TNCO) problem. 
