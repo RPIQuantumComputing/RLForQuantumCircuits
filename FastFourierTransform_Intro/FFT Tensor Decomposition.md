@@ -6,7 +6,9 @@ The input to the Fast Fourier Transform (FFT) algorithm is often a $1 * N$ dimen
 >FFT Runtime: $O(nlogn)$
 
 We will represent the FFT as a tensor of $Rank = 3$ containing $1 x N$ input vectors in order for the RL agent to look for shortcuts in the tensor, therby reducing memory consumption and runtime. 
-**![](https://lh7-us.googleusercontent.com/-5F6rZEeSPCnC6IxT-miAjgmwz5SjGPB8MRXrrGmhaJaTKJuzTf_LMtFZJjegPRIkhWWtwXvdiF9NKl70O72C5pa_aIwiS2lxeieyDZBuAYSPwufjSaNKBguO7snuvKPzUwGBdUyCcN9Wxgg7xPdRGbMdg=s2048)**
+
+![Screenshot 2024-02-25 223848](https://github.com/RPIQuantumComputing/RLForQuantumCircuits/assets/90359015/ddab043e-cfb0-43ff-acf3-ae7faea9c7d6)
+
 **How can reinforcement learning be used to optimize the FFT Algorithm?**
 Reinforcement learning are able to take a heuristic approach to problem solving, similar to humans. The main difference is that computers can process many times more data and operations than the human brain can. This allows the model to try many different methods for solving a problem and with each mistake or success, it adapts and follows the path that will maximize the amount of reward it will gain.
 >Note: The reward is determined by a function that calculates how favorable a state or decision is. The sum of these rewards over a set of actions is the return.
