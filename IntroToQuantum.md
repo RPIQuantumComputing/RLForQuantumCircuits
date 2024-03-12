@@ -4,6 +4,7 @@
 - **Superposition state**: The superposition state contains the probabilities of the bit being 1 or 0, but since its neither one, it can be represented as a vector. 
 Ex.) $|ψ⟩ = α|0⟩ + β|1⟩$
 <img  src="https://www.allaboutcircuits.com/uploads/articles/Wadler_quantum_3_.jpg"  width="400"  height="350">
+
 - **Why is it a sphere?**: It is a sphere because the vectors can point anywhere on the sphere and the norm is always 1. 
 - **Norm-perserving (unitary)**: gates that perserve the complex norm as equal to 1
 - **Magnitude of complex number**: The magnitude of a complex number $a + bi$ is given by $|a + bi| = \sqrt{a^2 + b^2}$.
