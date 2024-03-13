@@ -10,7 +10,7 @@ We will represent the FFT as a tensor of $Rank = 3$ containing $1 x N$ input vec
 ![Screenshot 2024-02-25 223848](https://github.com/RPIQuantumComputing/RLForQuantumCircuits/assets/90359015/ddab043e-cfb0-43ff-acf3-ae7faea9c7d6)
 
 **How can reinforcement learning be used to optimize the FFT Algorithm?**
-Reinforcement learning are able to take a heuristic approach to problem solving, similar to humans. The main difference is that computers can process many times more data and operations than the human brain can. This allows the model to try many different methods for solving a problem and with each mistake or success, it adapts and follows the path that will maximize the amount of reward it will gain.
+Reinforcement learning algorithms are able to take a heuristic approach to problem-solving, similar to humans. The main difference is that computers can process many times more data and operations than the human brain can. This allows the model to try many different methods for solving a problem and with each mistake or success, it adapts and follows the path that will maximize the amount of reward it will gain.
 >Note: The reward is determined by a function that calculates how favorable a state or decision is. The sum of these rewards over a set of actions is the return.
 
 Our RL algorithm will search through the tensor and try different approaches of performing the FFT while comparing the results to the actual output. Given the right environment and learning functions the algorithm can arrive at new and interesting results.
