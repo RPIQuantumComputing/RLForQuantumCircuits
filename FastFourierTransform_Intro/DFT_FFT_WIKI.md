@@ -34,3 +34,14 @@ Before multiplication, the complex exponential in the summation has a magnitude 
 
 ### 1.2.2: understanding of how the complex exponential evolves as k grows.  
 When $k=1$, the complex exponential will complete one rotation of the complex unit circle, but as k grows more rotations of the complex unit circle will be introduced. This can be illustrated by referencing figure one. 
+
+<div> 
+Figure One:
+
+!(FastFourierTransform_Intro/Picture1.png)
+
+Figure Two:
+
+!(FastFourierTransform_Intro/Picture2.png)
+</div>
+
