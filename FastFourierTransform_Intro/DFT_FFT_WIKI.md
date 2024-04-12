@@ -41,9 +41,7 @@ When you add a vector, you are essentially creating a new vector that spans from
 ### 1.2.4: Adding it all together
 Based on the last 3 sub-sections, we can envision that as we increase harmonics in the DFT, vectors will start to populate the complex unit circle at different angles. Most of the time, when summed up, these vectors will largely cancel each other out to produce a resulting vector with a small magnitude. However, if there is a case where there is an outlier value in the data set that repeats at a harmonic of the base angular frequency, this harmonic will have a vector that dominates in the summation of all the vectors present, leading to a larger value for the magnitude of the resulting vector. This is how the DFT finds a sinusoidal function representing the periodic repetition of a significant value in the data set. The less significant the difference between this periodic value and the other values, the harder it is for the DFT to isolate a harmonic representing this value's repetition. 
 
-### 2.3: Matrix Representation: 
-It turns out that the sum for the DFT is equivalent to the sum for computing matrix multiplication. This means that we can equivalently represent the DFT as a matrix multiplication:
+## Section Two: Introducing the Fast Fourier Transfrom
+This initial matrix multiplication has an order notation of O(N^2), which is not favorable for larger data sets. We want to find an approach that will get this complexity as close to O(N) as possible. With big data transformation algorithms like this, a desirable approach is to “divide and conquer”. The issue now, however, is finding a way to divide up the input vector without losing the periodic nature of the data set. 
 
-[■(F_0@F_1@⋮@F_n )]=[■(1&1&⋯&1@1&ω_n&…&ω_n^(n-1)@⋮&⋮&⋱&⋮@1&ω_n^(n-1)&⋯&ω_n^((n-1)^2 ) )][■(f_0@f_1@⋮@f_n )]
 
-You can check for yourself that this matrix represents the same thing as the summation for the DFT. There are a lot of exploitable symmetries in this matrix, which allows us to create the Fast Fourier Transform (FFT). 
