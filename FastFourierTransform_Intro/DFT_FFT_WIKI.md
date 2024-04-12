@@ -33,15 +33,17 @@ The goal of the DFT is to find a periodic function that represents the repetitio
 Before multiplication, the complex exponential in the summation has a magnitude of 1. However, you may recognize that the product $x_n e^(-iω_0 nk)$ is similar to a way of representing complex numbers, $|z| e^iθ$. Basically, what the product is doing is creating vectors in the direction of where we are in the complex unit circle, with a magnitude of $x_n$. To picture this visually, think of a unit circle with evenly spaced vectors (with spacing determined by nk), and each vector varies in magnitude. 
 
 ### 1.2.2: understanding of how the complex exponential evolves as k grows.  
-When $k=1$, the complex exponential will complete one rotation of the complex unit circle, but as k grows more rotations of the complex unit circle will be introduced. This can be illustrated by referencing figure one. 
+When $k=1$, the complex exponential will complete one rotation of the complex unit circle, but as k grows more rotations of the complex unit circle will be introduced. If we have a data set of size N=4, one rotation will be made to represent every value in the data set as a vector on the unit circle when k=1, but when k=2, two rotations will have to be made. This concept of increased rotation is key to finding a harmonic of the base frequency that accurately represents the input vector.
 
+### 1.2.3: Vector Addition
+When you add a vector, you are essentially creating a new vector that spans from the tail of the first vector to the head of the second vector when the two vectors are put head to tail. Because of this, the more aligned the vectors are in terms of directions, the larger their sum will be. This also means two equal vectors pointing in the opposite direction will cancel out. 
 
-Figure One:
+### 1.2.4: Adding it all together
+Based on the last 3 sub-sections, we can envision that as we increase harmonics in the DFT, vectors will start to populate the complex unit circle at different angles. Most of the time, when summed up, these vectors will largely cancel each other out to produce a resulting vector with a small magnitude. However, if there is a case where there is an outlier value in the data set that repeats at a harmonic of the base angular frequency, this harmonic will have a vector that dominates in the summation of all the vectors present, leading to a larger value for the magnitude of the resulting vector. This is how the DFT finds a sinusoidal function representing the periodic repetition of a significant value in the data set. The less significant the difference between this periodic value and the other values, the harder it is for the DFT to isolate a harmonic representing this value's repetition. 
 
-!(FastFourierTransform_Intro/Picture1.png)
+### 2.3: Matrix Representation: 
+It turns out that the sum for the DFT is equivalent to the sum for computing matrix multiplication. This means that we can equivalently represent the DFT as a matrix multiplication:
 
-Figure Two:
+[■(F_0@F_1@⋮@F_n )]=[■(1&1&⋯&1@1&ω_n&…&ω_n^(n-1)@⋮&⋮&⋱&⋮@1&ω_n^(n-1)&⋯&ω_n^((n-1)^2 ) )][■(f_0@f_1@⋮@f_n )]
 
-!(FastFourierTransform_Intro/Picture2.png)
-
-
+You can check for yourself that this matrix represents the same thing as the summation for the DFT. There are a lot of exploitable symmetries in this matrix, which allows us to create the Fast Fourier Transform (FFT). 
